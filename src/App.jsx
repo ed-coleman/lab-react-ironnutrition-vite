@@ -9,7 +9,7 @@ import AddFoodForm from './components/AddFoodForm'
 function App() {
   const [foodsState, setFoodsState] = useState(foods)
   const [showForm, setShowForm] = useState(false)
-
+  
 // delete button
 function handleDelete(name) {
   setFoodsState(foodsState.filter(food => food.name !== name ))
@@ -29,6 +29,7 @@ function handleDelete(name) {
     <Button type='button' onClick={toggleForm}> Hide Form / Add New Food </Button>
 {
   showForm === true && (
+    
     <AddFoodForm 
       foodsState = {foodsState} setFoodsState = {setFoodsState}
     />
